@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="BMI_calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,14 +29,14 @@
                                         <rect key="frame" x="0.0" y="536" width="374" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMc-Te-kUc" userLabel="Height">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="86.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXN-ph-6KF">
-                                                <rect key="frame" x="335.5" y="0.0" width="38.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="317.5" y="0.0" width="56.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -54,19 +54,22 @@
                                         <color key="minimumTrackTintColor" systemColor="labelColor"/>
                                         <color key="maximumTrackTintColor" red="0.85098039219999999" green="0.79215686269999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="heightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="GKz-uu-dUj"/>
+                                        </connections>
                                     </slider>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eQk-zY-KZS">
                                         <rect key="frame" x="0.0" y="637" width="374" height="21"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Otg-4z-vnb">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0Kg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH2-th-SQM">
-                                                <rect key="frame" x="330" y="0.0" width="44" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="303.5" y="0.0" width="70.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -83,6 +86,9 @@
                                         <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="maximumTrackTintColor" red="0.85098039219999999" green="0.79215686269999996" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="thumbTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="weightSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BIF-PM-GpC"/>
+                                        </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3A-YH-TVL">
                                         <rect key="frame" x="0.0" y="738" width="374" height="80"/>
@@ -94,6 +100,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Calculate">
                                             <fontDescription key="titleFontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="calculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T0U-h9-5vD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -107,15 +116,89 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QVk-gw-r2y" secondAttribute="bottom" id="ie3-Wi-TTT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="QXN-ph-6KF" id="uHf-mS-xyl"/>
+                        <outlet property="heightSlider" destination="A2e-TE-jFs" id="jcq-co-gCl"/>
+                        <outlet property="weightLabel" destination="hH2-th-SQM" id="rPw-gD-x7X"/>
+                        <outlet property="weightSlider" destination="cVJ-CR-ko7" id="Nis-qP-cyJ"/>
+                        <segue destination="mZ1-K1-d7j" kind="presentation" identifier="goToResult" id="gjc-Zf-jIe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="FO3-Yf-HGw">
+            <objects>
+                <viewController id="mZ1-K1-d7j" customClass="ResultViewController" customModule="BMI_calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fxK-CG-Ja6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="nri-gk-Nwn">
+                                <rect key="frame" x="32" y="329.5" width="350" height="183"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="28" translatesAutoresizingMaskIntoConstraints="NO" id="QVq-Lr-UbS">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="55"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-sn-FD2">
+                                        <rect key="frame" x="0.0" y="89" width="350" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="F8o-8L-b5g">
+                                        <rect key="frame" x="0.0" y="152.5" width="350" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylg-zc-Dna">
+                                <rect key="frame" x="50" y="713" width="294" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="foU-kq-IJQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="40"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Recalculate"/>
+                                <connections>
+                                    <action selector="recalculate:" destination="mZ1-K1-d7j" eventType="touchUpInside" id="Vg2-Pu-UZJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wx9-g4-bhM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ylg-zc-Dna" firstAttribute="bottom" secondItem="wx9-g4-bhM" secondAttribute="bottom" id="3oM-FH-ue1"/>
+                            <constraint firstItem="Ylg-zc-Dna" firstAttribute="trailing" secondItem="fxK-CG-Ja6" secondAttribute="trailingMargin" constant="-50" id="4Vz-9J-Zhh"/>
+                            <constraint firstItem="Ylg-zc-Dna" firstAttribute="leading" secondItem="wx9-g4-bhM" secondAttribute="leading" constant="50" id="d3A-qG-tKS"/>
+                            <constraint firstItem="nri-gk-Nwn" firstAttribute="centerX" secondItem="fxK-CG-Ja6" secondAttribute="centerX" id="pI5-Ek-g75"/>
+                            <constraint firstItem="nri-gk-Nwn" firstAttribute="centerY" secondItem="fxK-CG-Ja6" secondAttribute="centerY" id="r5D-AL-28u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adviceLabel" destination="F8o-8L-b5g" id="Z6s-q1-Kg5"/>
+                        <outlet property="resultLabel" destination="yU8-sn-FD2" id="vov-fh-Xyu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gSa-nj-gDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.81159420289862" y="81.696428571428569"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
