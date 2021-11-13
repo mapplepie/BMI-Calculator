@@ -45,7 +45,7 @@
                                             <constraint firstAttribute="height" constant="21" id="NJy-xV-y7h"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="100" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="A2e-TE-jFs">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="A2e-TE-jFs">
                                         <rect key="frame" x="-2" y="567" width="378" height="61"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -78,7 +78,7 @@
                                             <constraint firstAttribute="height" constant="21" id="ttZ-v9-7qz"/>
                                         </constraints>
                                     </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="140" minValue="35" maxValue="250" translatesAutoresizingMaskIntoConstraints="NO" id="cVJ-CR-ko7">
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="cVJ-CR-ko7">
                                         <rect key="frame" x="-2" y="668" width="378" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="lwA-mE-fdz"/>
