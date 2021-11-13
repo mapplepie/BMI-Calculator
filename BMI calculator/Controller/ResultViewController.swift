@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResultViewController: UITableViewController {
+class ResultViewController: UIViewController {
     
     var bmiValue: String?
     var advice: String?
